@@ -1,11 +1,32 @@
 <view>
-    <view class="hot">
+  <view class="hot">
     <text class="hot_title">热门搜索</text>
     <view class="hot_list">
-    <navigator url="" wx:for="{{ popularList }}" wx:key="name" class="hot_item">{{ item.name }}</navigator> 
+      <navigator url="" wx:for="{{ popularList }}" wx:key="name" class="hot_item">{{ item.name }}</navigator>
     </view>
+  </view>
+  <view class="search_view">
+    <input class="search" placeholder="输入名称" />
+  </view>
+
+  <!--导航条-->
+  <view class="page">
+    <view class="page__bd">
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">{{item}}</view>
+            </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">天</view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">地</view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 2}}">人</view>
+        </view>
+      </view>
     </view>
-    <view class="search_view">
-    <input class="search" placeholder="输入名称"/>
-    </view>
+  </view>
 </view>
