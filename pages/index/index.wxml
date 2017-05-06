@@ -1,0 +1,11 @@
+<view>
+    <view class="hot">
+    <text class="hot_title">热门搜索</text>
+    <view class="hot_list">
+    <navigator url="" wx:for="{{ popularList }}" wx:key="name" class="hot_item">{{ item.name }}</navigator> 
+    </view>
+    </view>
+    <view class="search_view">
+    <input class="search" placeholder="输入名称"/>
+    </view>
+</view>

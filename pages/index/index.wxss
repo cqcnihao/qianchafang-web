@@ -1,0 +1,36 @@
+/**热门模块**/
+.hot{
+  height: 210rpx;
+  background: #44ff66;
+  padding:10rpx;
+}
+
+.hot_title{
+  color: black;
+  display:block;
+
+}
+
+.search_view{
+  background: #44ff66;
+  padding: 10rpx;
+}
+
+.search{
+  background: white;
+  border-radius: 8rpx;
+  padding-left: 10rpx;
+}
+
+.hot_list{
+  margin: 10rpx,10rpx,10rpx,10rpx
+}
+
+.hot_item{
+  display: inline-block;
+  color:#fff;
+  background: #66cc77;
+  border-radius: 15rpx;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+}
