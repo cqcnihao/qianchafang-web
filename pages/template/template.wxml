@@ -1,0 +1,10 @@
+<template name="my_grid">
+    <view class="weui-grids">
+            <block wx:for="{{grids}}" wx:key="*this">
+                <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="" />
+                    <view class="weui-grid__label">Grid</view>
+                </navigator>
+            </block>
+        </view>
+</template>

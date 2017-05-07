@@ -11,6 +11,11 @@ Page({
         // end
 
         popularList: [],
+
+        // 九宫格
+
+        grids: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+
     },
 
     // 伪数据
@@ -48,7 +53,7 @@ Page({
 
     onShow() {
         this.getPopular();
-        navbar;
+        this.navbar();
 
     }
 

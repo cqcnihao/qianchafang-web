@@ -1,3 +1,4 @@
+<import src="../template/template.wxml" />
 <view>
   <view class="hot">
     <text class="hot_title">热门搜索</text>
@@ -22,9 +23,11 @@
           <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
         </view>
         <view class="weui-tab__panel">
-          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">天</view>
-          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">地</view>
-          <view class="weui-tab__content" hidden="{{activeIndex != 2}}">人</view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <template is="my_grid" data="{{grids}}"></template>
+          </view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}"><template is="my_grid" data="{{grids}}"></template></view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 2}}"><template is="my_grid" data="{{grids}}"></template></view>
         </view>
       </view>
     </view>
